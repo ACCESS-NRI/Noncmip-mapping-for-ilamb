@@ -1,0 +1,3 @@
+[submodule "ILAMB-noncmip"]
+	path = ILAMB-noncmip
+	url = https://github.com/rhaegar325/ILAMB-noncmip.git

@@ -292,6 +292,12 @@ def mp_newdataset(file):
         temp_ds['time'].attrs=ds.time.attrs
         temp_ds['lat'].attrs=ds.lat.attrs
         temp_ds['lon'].attrs=ds.lon.attrs
+
+        if var_name=='tsl':
+            depth_val,depth_bounds = cableSoilLevels()
+            temp_ds=temp_ds.rename({'soil_model_level_number':'depth'})
+            temp_ds=temp_ds.assign_coords(depth=depth_val)
+            temp_ds=temp_ds.assign(depth_bnds=(['depth','bnds'],depth_bounds))
         
         if var_name not in ds_dict.keys():
             # ds_dict[var_name]=pickle.dumps(temp_ds,protocol=-1)#change

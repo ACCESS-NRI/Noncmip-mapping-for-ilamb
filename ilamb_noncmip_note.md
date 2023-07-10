@@ -107,4 +107,4 @@ The `temp` directory will contain all CMORised variables stored in NETcdf format
 ├── tas.nc
 └── tsl.nc
 ```
-For this version we only provide automatical CMOrise for 20 variables above, Which meet the demand of `CMIP6.cfg` provide by ilamb official github repo. 
+For this version we only provide automatical CMORise for 20 variables above, Which meet the demand of `CMIP6.cfg` provide by ilamb official github repo. 
